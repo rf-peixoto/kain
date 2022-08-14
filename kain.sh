@@ -46,7 +46,7 @@ if [ "$spf" == "pass" ]
 then
   echo -e "\e[32m[\e[0mSPF\e[32m]\t\t\t$spf"
 else
-  echo -e "\e[32m[\e[0mSPF\e[32m]\t\t\e[31m$spf\e[0m"
+  echo -e "\e[31m[\e[0mSPF\e[31m]\t\t\e[31m$spf\e[0m"
 fi
 
 # ---------------- #
@@ -57,7 +57,7 @@ if [ "$dmarc" == "pass" ]
 then
   echo -e "\e[32m[\e[0mDMARC\e[32m]\t\t\t$dmarc"
 else
-  echo -e "\e[32m[\e[0mDMARC\e[32m]\t\t\t\e[31m$dmarc\e[0m"
+  echo -e "\e[31m[\e[0mDMARC\e[31m]\t\t\t\e[31m$dmarc\e[0m"
 fi
 
 # ---------------- #
@@ -68,7 +68,7 @@ if [ "$dkim" == "pass" ]
 then
   echo -e "\e[32m[\e[0mDKIM\e[32m]\t\t\t$dkim"
 else
-  echo -e "\e[32m[\e[0mDKIM\e[32m]\t\t\t\e[31m$dkim\e[0m"
+  echo -e "\e[31m[\e[0mDKIM\e[31m]\t\t\t\e[31m$dkim\e[0m"
 fi
 
 echo -e "\e[0m"
