@@ -23,7 +23,7 @@ echo -e "\e[32m[\e[0mFROM\e[32m]\e[0m\t\t\t$from"
 # ---------------- #
 # Reply-To:
 # ---------------- #
-replyto=$(grep "Reply-To: "  $1 | grep -E -o "\b[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+.[a-zA-Z0-9.-]+\b")
+replyto=$(grep "Reply-To: "  $1 | head -n 1 | grep -E -o "\b[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+.[a-zA-Z0-9.-]+\b")
 echo -e "\e[32m[\e[0mReply-To\e[32m]\e[0m\t\t$replyto"
 
 # ---------------- #
