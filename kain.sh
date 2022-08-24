@@ -7,7 +7,7 @@ echo -e "  |____|__ (____  /__|___|  /"
 echo -e "          \/    \/        \/"
 echo -e "  v1.1            eml parser"
 
-if [ "$1" == "" ]
+if [ "$2" == "" ]
 then
   echo -e "  USAGE: $0 [service] [file.eml]\e[0m"
   exit
