@@ -5,7 +5,7 @@ echo -e "  |      < \__  \ |  |/    \ "
 echo -e "  |    |  \ / __ \|  |   |  \ "
 echo -e "  |____|__ (____  /__|___|  /"
 echo -e "          \/    \/        \/"
-echo -e "  v1.1            eml parser"
+echo -e "  v1.2            eml parser"
 
 if [ "$2" == "" ]
 then
