@@ -3,6 +3,6 @@ Kain is a metadata parser for eml files. The utility allows quick querying of SP
 
 Usage:`./kain.sh [service] [file.eml]`
 
-So far you can use the following services: `outlook` | `gmail`\`
+So far you can use the following services: `outlook` | `gmail` | `zimbra` (partial)
 
 **TO DO:** Identify and export attachments; include support for other email services;
