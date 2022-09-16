@@ -98,8 +98,7 @@ then
   echo -e "\e[32m[\e[0mRP\e[32m]\e[0m\t\t$replyto"
   to=$(grep "To: " $2 | head -n 1 | grep -E -o "\b[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+.[a-zA-Z0-9.-]+\b")
   echo -e "\e[32m[\e[0mTO\e[32m]\e[0m\t\t\t$to"
-  source_ip=$(grep X-Originating-IP: $2 | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"
-)
+  source_ip=$(grep "Received: from" $2 | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" | sort | tail -n 1)
   echo -e "\e[32m[\e[0mIP\e[32m]\e[0m\t\t\t$source_ip"
   spf=$(grep "SPF_PASS=" $2 | cut -d "," -f 3 | cut -d "=" -f 2)
   if [ "$spf" == "pass" ]
