@@ -5,4 +5,6 @@ Usage:`./kain.sh [service] [file.eml] `
 
 So far you can use the following services: `outlook` | `gmail` | `zimbra*` | `proton`\`
 
+*\* partial.*
+
 **TO DO:** Identify and export attachments; include support for other email services;
