@@ -123,7 +123,7 @@ then
 fi
 
 # -------------------- #
-# ProtonMail
+# Proton Mail
 # -------------------- #
 if [ "$1" == "proton" ]
 then
