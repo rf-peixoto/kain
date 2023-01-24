@@ -1,4 +1,23 @@
 #!/bin/bash
+
+usage() {
+  cat <<EOF
+Usage: ${0##*/} [service] [file]
+
+Services:
+  outlook	If your eml was exported from Outlook.
+  gmail	If your eml was exported from Gmail.
+  proton	If your eml was exported from ProtonMail.
+  zimbra	If your eml was exported from zimbra. Zimbra's files may show some errors.
+
+EOF
+}
+
+if [[ -z $1 || $1 = @(-h|--help) ]]; then
+  usage
+  exit $(( $# ? 0 : 1 ))
+fi
+
 echo -e "\e[1;32m   ____  __.      .__"
 echo -e "  |    |/ _|____  |__| ____"
 echo -e "  |      < \__  \ |  |/    \ "
@@ -6,13 +25,6 @@ echo -e "  |    |  \ / __ \|  |   |  \ "
 echo -e "  |____|__ (____  /__|___|  /"
 echo -e "          \/    \/        \/"
 echo -e "  v1.3            eml parser"
-
-if [ "$2" == "" ]
-then
-  echo -e "  USAGE: $0 [service] [file.eml]\e[0m"
-  exit
-fi
-echo -e "\e[0m"
 
 # -------------------- #
 # Outlook
